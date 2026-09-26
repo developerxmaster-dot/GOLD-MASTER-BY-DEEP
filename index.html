@@ -925,7 +925,7 @@
       </div>
       <div class="section-label">Enter 22K Rate (per gram)</div>
       <div class="rate-input-row">
-        <input type="number" id="rate22Input" placeholder="Enter Gold Rate" inputmode="decimal">
+        <input type="text" id="rate22Input" placeholder="Enter Gold Rate" inputmode="decimal">
         <button class="btn small" onclick="saveRateToHistory()">Save</button>
       </div>
 
@@ -1007,11 +1007,11 @@
       <div class="row2">
         <div class="field">
           <label id="jewelWeightLabel">Weight (grams)</label>
-          <input type="number" id="jewelGrams" placeholder="Enter Weight" inputmode="decimal" oninput="restrictToNumeric(this); computeJewel()">
+          <input type="text" id="jewelGrams" placeholder="Enter Weight" inputmode="decimal" oninput="restrictToNumeric(this); computeJewel()">
         </div>
         <div class="field">
           <label id="jewelMakingLabel">Making Charges (%)</label>
-          <input type="number" id="jewelMaking" placeholder="Enter Making Charges" inputmode="decimal" oninput="restrictToNumeric(this); computeJewel()">
+          <input type="text" id="jewelMaking" placeholder="Enter Making Charges" inputmode="decimal" oninput="restrictToNumeric(this); computeJewel()">
         </div>
       </div>
       <div class="field hidden" id="diamondPriceModeField">
@@ -1024,21 +1024,21 @@
       <div class="row2 hidden" id="diamondWeightRow">
         <div class="field" style="margin-bottom:0;">
           <label>Diamond Weight (carats)</label>
-          <input type="number" id="jewelDiamondCarat" placeholder="Enter Carats" min="0" step="0.01" inputmode="decimal" oninput="restrictToNumeric(this); computeJewel()">
+          <input type="text" id="jewelDiamondCarat" placeholder="Enter Carats" min="0" step="0.01" inputmode="decimal" oninput="restrictToNumeric(this); computeJewel()">
           <div style="font-size:11px;color:var(--muted);margin-top:4px;" id="diamondGramsEquiv">= 0.00 g (1 ct = 0.2 g)</div>
         </div>
         <div class="field" style="margin-bottom:0;">
           <label>Diamond Rate (₹ / carat)</label>
-          <input type="number" id="jewelDiamondRate" placeholder="Enter Rate" min="0" inputmode="decimal" oninput="restrictToNumeric(this); computeJewel()">
+          <input type="text" id="jewelDiamondRate" placeholder="Enter Rate" min="0" inputmode="decimal" oninput="restrictToNumeric(this); computeJewel()">
         </div>
       </div>
       <div class="field hidden" id="diamondFlatField">
         <label>Diamond Charges (₹ flat)</label>
-        <input type="number" id="jewelDiamondFlat" placeholder="Enter Diamond Charges" min="0" inputmode="decimal" oninput="restrictToNumeric(this); computeJewel()">
+        <input type="text" id="jewelDiamondFlat" placeholder="Enter Diamond Charges" min="0" inputmode="decimal" oninput="restrictToNumeric(this); computeJewel()">
       </div>
       <div class="field" id="stoneField">
         <label>Additional Stone / Setting Charges (₹)</label>
-        <input type="number" id="jewelStone" placeholder="Enter Amount (optional)" inputmode="decimal" oninput="restrictToNumeric(this); computeJewel()">
+        <input type="text" id="jewelStone" placeholder="Enter Amount (optional)" inputmode="decimal" oninput="restrictToNumeric(this); computeJewel()">
       </div>
 
       <!-- Other Charges / Discount / Advance Received — one compact row of toggles -->
@@ -1076,7 +1076,7 @@
       <div class="glass-block glass-body hidden" id="otherChargesBody">
         <div class="field" style="margin-bottom:0;">
           <label>Other Charges (₹)</label>
-          <input type="number" id="jewelOtherCharges" placeholder="Enter Amount" inputmode="decimal" oninput="restrictToNumeric(this); computeJewel()">
+          <input type="text" id="jewelOtherCharges" placeholder="Enter Amount" inputmode="decimal" oninput="restrictToNumeric(this); computeJewel()">
         </div>
       </div>
 
@@ -1089,7 +1089,7 @@
         <!-- Flat mode -->
         <div class="field" id="discFlatFields" style="margin-bottom:0;">
           <label>Flat Discount — on Gold + Making + Stone/Other (%)</label>
-          <input type="number" id="jewelDiscountFlat" placeholder="Enter Discount" min="0" max="100" inputmode="decimal" oninput="restrictToNumeric(this); computeJewel()">
+          <input type="text" id="jewelDiscountFlat" placeholder="Enter Discount" min="0" max="100" inputmode="decimal" oninput="restrictToNumeric(this); computeJewel()">
         </div>
 
         <!-- Split mode: independent Making / Stone checkboxes, each with its own % -->
@@ -1103,7 +1103,7 @@
           </div>
           <div class="field hidden" id="discOnMakingField">
             <label>Discount on Making (%)</label>
-            <input type="number" id="jewelDiscountMaking" placeholder="Enter Discount" min="0" max="100" inputmode="decimal" oninput="restrictToNumeric(this); computeJewel()">
+            <input type="text" id="jewelDiscountMaking" placeholder="Enter Discount" min="0" max="100" inputmode="decimal" oninput="restrictToNumeric(this); computeJewel()">
           </div>
 
           <div class="toggle-row" id="discOnStoneRow" style="margin-bottom:8px;">
@@ -1115,7 +1115,7 @@
           </div>
           <div class="field hidden" id="discOnStoneField" style="margin-bottom:0;">
             <label>Discount on Stone/Diamond (%)</label>
-            <input type="number" id="jewelDiscountStone" placeholder="Enter Discount" min="0" max="100" inputmode="decimal" oninput="restrictToNumeric(this); computeJewel()">
+            <input type="text" id="jewelDiscountStone" placeholder="Enter Discount" min="0" max="100" inputmode="decimal" oninput="restrictToNumeric(this); computeJewel()">
           </div>
         </div>
       </div>
@@ -1123,7 +1123,7 @@
       <div class="glass-block glass-body hidden" id="advanceBody">
         <div class="field" style="margin-bottom:0;">
           <label>Advance Paid (₹)</label>
-          <input type="number" id="jewelAdvance" placeholder="Enter Advance Amount" min="0" inputmode="decimal" oninput="restrictToNumeric(this); computeJewel()">
+          <input type="text" id="jewelAdvance" placeholder="Enter Advance Amount" min="0" inputmode="decimal" oninput="restrictToNumeric(this); computeJewel()">
         </div>
       </div>
 
@@ -1208,7 +1208,7 @@
       </div>
       <div class="field">
         <label>Gross Metal Weight (grams)</label>
-        <input type="number" id="pgGrossWeight" placeholder="Enter Gross Weight" min="0" step="0.001" inputmode="decimal" oninput="restrictToNumeric(this); computePureGold()">
+        <input type="text" id="pgGrossWeight" placeholder="Enter Gross Weight" min="0" step="0.001" inputmode="decimal" oninput="restrictToNumeric(this); computePureGold()">
       </div>
       <div class="field">
         <label>Karat</label>
@@ -1225,7 +1225,7 @@
       </div>
       <div class="field hidden" id="pgCustomKaratField">
         <label>Custom Karat (out of 24)</label>
-        <input type="number" id="pgCustomKarat" placeholder="e.g. 20.5" min="0" max="24" step="0.01" inputmode="decimal" oninput="restrictToNumeric(this); computePureGold()">
+        <input type="text" id="pgCustomKarat" placeholder="e.g. 20.5" min="0" max="24" step="0.01" inputmode="decimal" oninput="restrictToNumeric(this); computePureGold()">
       </div>
       <div class="field">
         <label>Calculate Using</label>
@@ -1252,11 +1252,11 @@
       </div>
       <div class="field">
         <label id="stoneConvInputLabel">Weight (Ratti)</label>
-        <input type="number" id="stoneConvInput" placeholder="Enter Ratti" min="0" step="0.01" inputmode="decimal" oninput="restrictToNumeric(this); computeStoneConv()">
+        <input type="text" id="stoneConvInput" placeholder="Enter Ratti" min="0" step="0.01" inputmode="decimal" oninput="restrictToNumeric(this); computeStoneConv()">
       </div>
       <div class="field">
         <label>Rate (₹ per Ratti) — optional</label>
-        <input type="number" id="stoneConvRate" placeholder="Enter Rate per Ratti" min="0" inputmode="decimal" oninput="restrictToNumeric(this); computeStoneConv()">
+        <input type="text" id="stoneConvRate" placeholder="Enter Rate per Ratti" min="0" inputmode="decimal" oninput="restrictToNumeric(this); computeStoneConv()">
       </div>
       <div class="breakdown" id="stoneConvResultBox"></div>
     </div>
@@ -1329,7 +1329,7 @@
       <div class="glass-block glass-body hidden" id="gepOtherObjBody">
           <div class="field" style="margin-bottom:0;">
             <label>Other Objects Weight (grams)</label>
-            <input type="number" id="gepOtherObjWeight" placeholder="Enter Weight" inputmode="decimal" oninput="restrictToNumeric(this); computeGEP()">
+            <input type="text" id="gepOtherObjWeight" placeholder="Enter Weight" inputmode="decimal" oninput="restrictToNumeric(this); computeGEP()">
           </div>
         </div>
 
@@ -1341,7 +1341,7 @@
         </div>
         <div class="field">
           <label>Gold Weight (g)</label>
-          <input type="number" id="gepGoldWeight" placeholder="Enter Weight" inputmode="decimal" oninput="restrictToNumeric(this); computeGEP()">
+          <input type="text" id="gepGoldWeight" placeholder="Enter Weight" inputmode="decimal" oninput="restrictToNumeric(this); computeGEP()">
         </div>
       </div>
 
@@ -1357,7 +1357,7 @@
       <div id="gepKaratWiseBlock">
         <div class="field" style="margin-bottom:8px;">
           <label>Karat (0–24, decimals allowed)</label>
-          <input type="number" id="gepKaratInput" placeholder="e.g. 19.5" min="0" max="24" step="0.1" inputmode="decimal" oninput="restrictToNumeric(this); onGepKaratInput(this.value)">
+          <input type="text" id="gepKaratInput" placeholder="e.g. 19.5" min="0" max="24" step="0.1" inputmode="decimal" oninput="restrictToNumeric(this); onGepKaratInput(this.value)">
         </div>
         <div class="karat-quick-btns" id="gepKaratQuickBtns"></div>
         <div id="gepKaratQuickResult"></div>
@@ -1412,7 +1412,7 @@
       <div class="glass-block glass-body hidden" id="gepCustomDeductionBody">
         <div class="field" style="margin-bottom:0;">
           <label>Custom Deduction — overrides standard slab (%)</label>
-          <input type="number" id="gepCustomDeductionPct" placeholder="Enter Deduction" min="0" max="100" inputmode="decimal" oninput="restrictToNumeric(this); computeGEP()">
+          <input type="text" id="gepCustomDeductionPct" placeholder="Enter Deduction" min="0" max="100" inputmode="decimal" oninput="restrictToNumeric(this); computeGEP()">
         </div>
       </div>
 
@@ -1424,11 +1424,11 @@
         </div>
         <div class="field" id="gepCatGoldField" style="margin-bottom:0;">
           <label>Discount on Deduction — Gold (%)</label>
-          <input type="number" id="gepCatGoldPct" placeholder="Enter Discount" min="0" max="100" inputmode="decimal" oninput="restrictToNumeric(this); computeGEP()">
+          <input type="text" id="gepCatGoldPct" placeholder="Enter Discount" min="0" max="100" inputmode="decimal" oninput="restrictToNumeric(this); computeGEP()">
         </div>
         <div class="field hidden" id="gepCatDiamondField" style="margin-bottom:0;">
           <label>Discount on Deduction — Diamond (%)</label>
-          <input type="number" id="gepCatDiamondPct" placeholder="Enter Discount" min="0" max="100" inputmode="decimal" oninput="restrictToNumeric(this); computeGEP()">
+          <input type="text" id="gepCatDiamondPct" placeholder="Enter Discount" min="0" max="100" inputmode="decimal" oninput="restrictToNumeric(this); computeGEP()">
         </div>
       </div>
 
@@ -1444,7 +1444,7 @@
         </div>
         <div class="field hidden" id="gepBuyBackCustomField" style="margin-bottom:0;">
           <label>Custom Buy Back Deduction (%)</label>
-          <input type="number" id="gepBuyBackCustomPct" placeholder="Enter Deduction" min="0" max="100" inputmode="decimal" oninput="restrictToNumeric(this); computeGEP()">
+          <input type="text" id="gepBuyBackCustomPct" placeholder="Enter Deduction" min="0" max="100" inputmode="decimal" oninput="restrictToNumeric(this); computeGEP()">
         </div>
         <div class="breakdown" id="gepBuyBackBreakdown" style="margin-top:6px;"></div>
       </div>
@@ -1778,10 +1778,14 @@
           <button class="btn ghost small hidden" id="gdriveRestoreBtn" onclick="restoreFromGoogleDrive()">Restore</button>
           <button class="btn ghost small hidden" id="gdriveSignOutBtn" onclick="googleDriveSignOut()">Sign Out</button>
         </div>
-        <div class="glass-body" id="gdriveAutoRow" style="margin-top:8px;">
-          <label class="lib-check" style="margin:0;">
-            <input type="checkbox" id="gdriveAutoToggle" onchange="onGdriveAutoToggle()"> Also back up here automatically every week
-          </label>
+        <div class="glass-body" id="gdriveAutoRow" style="margin-top:10px;padding-top:10px;border-top:1px dashed var(--border);">
+          <div class="glass-head" style="min-height:0;">
+            <div class="glass-title" style="font-size:12px;">Also back up here automatically every week</div>
+            <label class="switch glass">
+              <input type="checkbox" id="gdriveAutoToggle" onchange="onGdriveAutoToggle()">
+              <span class="slider-el"></span>
+            </label>
+          </div>
         </div>
       </div>
     </div>
@@ -5290,7 +5294,7 @@ function gepReadingFieldHtml(r, idx){
   const removeLink = idx>=2 ? ` <span class="mini-x" onclick="removeGepReading(${r.id})">✕</span>` : '';
   return `<div class="field">
     <label>${label}${removeLink}</label>
-    <input type="number" value="${r.value}" placeholder="Enter Value" min="0" max="100" inputmode="decimal"
+    <input type="text" value="${r.value}" placeholder="Enter Value" min="0" max="100" inputmode="decimal"
       oninput="restrictToNumeric(this); updateGepReading(${r.id}, this.value)">
   </div>`;
 }
@@ -5750,3 +5754,4 @@ initFromState();
 </script>
 </body>
 </html>
+
