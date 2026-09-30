@@ -1,14 +1,16 @@
-<html lang="en" style="--font: &quot;Cinzel&quot;, serif; --primary: #d81b4a; --secondary: #ff5c8a;"><head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Gold Master by Deep — v3.6.1</title>
-<meta name="theme-color" content="#d81b4a">
+<meta name="theme-color" content="#E6007E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&amp;family=Playfair+Display:wght@600;700&amp;family=Fraunces:opsz,wght@9..144,500;9..144,700&amp;family=DM+Serif+Display&amp;family=Poppins:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700&amp;family=Space+Mono&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Playfair+Display:wght@600;700&family=Fraunces:opsz,wght@9..144,500;9..144,700&family=DM+Serif+Display&family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Space+Mono&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --primary:#d81b4a;
-    --secondary:#ff5c8a;
+    --primary:#e6007e;
+    --secondary:#b0005f;
     --font: 'Cinzel', serif;
     --bodyfont: 'Inter', sans-serif;
     --bg:#faf7f2;
@@ -20,8 +22,8 @@
     --radius: 18px;
   }
   [data-mode="dark"]{
-    --bg:#0e0a0c;
-    --surface:#1a1216;
+    --bg:#150a12;
+    --surface:#20101b;
     --text:#ffffff;
     --muted:#d9c6cd;
     --border:rgba(255,255,255,0.1);
@@ -49,7 +51,7 @@
     width:44px;height:44px;border-radius:50%;
     background:linear-gradient(135deg,var(--primary),var(--secondary));
     display:flex;align-items:center;justify-content:center;
-    color:#fff;font-weight:700;font-size:15px;flex-shrink:0;
+    color:var(--on-primary,#fff);font-weight:700;font-size:15px;flex-shrink:0;
     box-shadow:var(--shadow);
     overflow:hidden;
     border:2px solid var(--secondary);
@@ -81,7 +83,7 @@
     border-radius:8px;
     font-size:12px;color:var(--muted);
   }
-  [data-mode="dark"] .disclaimer{background:rgba(216,27,74,0.14);}
+  [data-mode="dark"] .disclaimer{background:rgba(230,0,126,0.14);}
   [data-mode="dark"] .app-title{color:#ffffff;}
 
   /* Offer marquee */
@@ -334,7 +336,7 @@
   }
   .mode-toggle button.active{
     background:linear-gradient(135deg,var(--primary),var(--secondary));
-    color:#fff;box-shadow:0 4px 12px rgba(0,0,0,0.18);
+    color:var(--on-primary,#fff);box-shadow:0 4px 12px rgba(0,0,0,0.18);
   }
 
   .card{
@@ -357,7 +359,7 @@
   .btn{
     padding:11px 16px;border-radius:10px;border:none;cursor:pointer;
     font-weight:600;font-size:13px;font-family:var(--bodyfont);
-    background:linear-gradient(135deg,var(--primary),var(--secondary));color:#fff;
+    background:linear-gradient(135deg,var(--primary),var(--secondary));color:var(--on-primary,#fff);
     box-shadow:0 4px 12px rgba(0,0,0,0.15);white-space:nowrap;
   }
   .btn.ghost{background:transparent;border:1.5px solid var(--primary);color:var(--primary);box-shadow:none;}
@@ -375,7 +377,7 @@
   .hallmark-badge{
     width:30px;height:30px;border-radius:50%;flex-shrink:0;
     background:linear-gradient(135deg,var(--secondary),var(--primary));
-    color:#fff;font-size:9px;font-weight:700;display:flex;align-items:center;justify-content:center;
+    color:var(--on-primary,#fff);font-size:9px;font-weight:700;display:flex;align-items:center;justify-content:center;
     text-align:center;line-height:1.05;box-shadow:0 2px 6px rgba(0,0,0,0.2);
   }
   .karat-name{font-family:var(--font);font-weight:700;font-size:14px;}
@@ -435,7 +437,7 @@
   }
   [data-mode="dark"] .discount-mode-toggle button{background:rgba(255,255,255,0.05);}
   .discount-mode-toggle button.active{
-    border-color:var(--primary);color:#fff;
+    border-color:var(--primary);color:var(--on-primary,#fff);
     background:linear-gradient(135deg,var(--primary),var(--secondary));
     box-shadow:0 3px 10px rgba(0,0,0,0.15);
   }
@@ -538,10 +540,10 @@
   .style-toggles{display:flex;gap:8px;margin-top:2px;}
   .style-toggles button{flex:1;padding:8px;border-radius:8px;border:1px solid var(--border);background:var(--bg);
     color:var(--text);font-size:12px;cursor:pointer;}
-  .style-toggles button.on{background:var(--primary);color:#fff;border-color:var(--primary);}
+  .style-toggles button.on{background:var(--primary);color:var(--on-primary,#fff);border-color:var(--primary);}
 
   .about-photo{width:76px;height:76px;border-radius:50%;margin:0 auto 10px;display:block;
-    background:linear-gradient(135deg,var(--primary),var(--secondary));color:#fff;font-weight:700;
+    background:linear-gradient(135deg,var(--primary),var(--secondary));color:var(--on-primary,#fff);font-weight:700;
     display:flex;align-items:center;justify-content:center;font-size:22px;overflow:hidden;border:3px solid var(--secondary);}
   .about-photo img{width:100%;height:100%;object-fit:cover;}
   .about-name{text-align:center;font-family:var(--font);font-weight:700;font-size:16px;}
@@ -597,7 +599,7 @@
   .karat-mini-btn.active{ border-color:var(--primary); background:rgba(122,31,43,0.08); color:var(--primary); }
   .preview-save-btn{
     display:block; width:100%; margin-top:4px;
-    background:linear-gradient(135deg,var(--primary),var(--secondary)); color:#fff;
+    background:linear-gradient(135deg,var(--primary),var(--secondary)); color:var(--on-primary,#fff);
     animation:savePrefPulse 1.4s ease-in-out infinite;
   }
   .preview-save-btn.hidden{ display:none; animation:none; }
@@ -612,7 +614,7 @@
   .interval-chip{flex:0 0 auto;padding:7px 13px;border-radius:20px;border:1px solid var(--border);
     background:var(--surface);color:var(--text);font-size:12px;font-family:var(--bodyfont);
     cursor:pointer;white-space:nowrap;}
-  .interval-chip.on{background:var(--primary);border-color:var(--primary);color:#fff;}
+  .interval-chip.on{background:var(--primary);border-color:var(--primary);color:var(--on-primary,#fff);}
   #historyGraphCanvas{width:100%;height:auto;display:block;border-radius:10px;}
   .graph-canvas-wrap{margin-bottom:4px;}
   .pos-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;max-width:180px;}
@@ -696,7 +698,7 @@
     transition:background .15s ease, color .15s ease, border-color .15s ease;
   }
   .slide-chip input:checked + span{
-    background:linear-gradient(135deg,var(--primary),var(--secondary)); border-color:transparent; color:#fff;
+    background:linear-gradient(135deg,var(--primary),var(--secondary)); border-color:transparent; color:var(--on-primary,#fff);
   }
   .slide-chip input:checked + span::before{ content:"✓"; margin-right:4px; font-size:11px; }
 
@@ -718,18 +720,18 @@
   @keyframes panelFadeOut{ from{opacity:1;} to{opacity:0;} }
 
   /* ===== Custom button colours (v3.2) — fall back to the theme when unset ===== */
-  .btn{ background:linear-gradient(135deg,var(--btn-a,var(--primary)),var(--btn-b,var(--secondary))); color:var(--btn-text,#fff); }
+  .btn{ background:linear-gradient(135deg,var(--btn-a,var(--primary)),var(--btn-b,var(--secondary))); color:var(--btn-text,var(--on-primary,#fff)); }
   .btn.ghost{ background:transparent; border-color:var(--btn-line,var(--primary)); color:var(--btn-line,var(--primary)); }
-  .mode-toggle button.active{ background:linear-gradient(135deg,var(--btn-a,var(--primary)),var(--btn-b,var(--secondary))); color:var(--btn-text,#fff); }
+  .mode-toggle button.active{ background:linear-gradient(135deg,var(--btn-a,var(--primary)),var(--btn-b,var(--secondary))); color:var(--btn-text,var(--on-primary,#fff)); }
   .seg button.active, .karat-mini-btn.active, .discount-mode-toggle button.active{
     border-color:var(--btn-line,var(--primary)); color:var(--btn-line,var(--primary)); background:var(--btn-soft,rgba(122,31,43,0.08));
   }
-  .slide-chip input:checked + span{ background:linear-gradient(135deg,var(--btn-a,var(--primary)),var(--btn-b,var(--secondary))); color:var(--btn-text,#fff); }
+  .slide-chip input:checked + span{ background:linear-gradient(135deg,var(--btn-a,var(--primary)),var(--btn-b,var(--secondary))); color:var(--btn-text,var(--on-primary,#fff)); }
   .switch input:checked + .slider-el, .switch.glass input:checked + .slider-el{ background:linear-gradient(135deg,var(--btn-a,var(--primary)),var(--btn-b,var(--secondary))); }
 
   .btn-colour-panel{ margin:2px 0 14px; padding-top:10px; border-top:1px dashed var(--border); }
   .btn-colour-title{ font-size:12px; color:var(--muted); font-weight:600; margin-bottom:2px; }
-  .btn-colour-default{ background:conic-gradient(from 0deg,#d81b4a,#ff5c8a,#d81b4a) !important; position:relative; }
+  .btn-colour-default{ background:conic-gradient(from 0deg,#e6007e,#b0005f,#e6007e) !important; position:relative; }
   .btn-colour-default::after{ content:"A"; position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:800; color:#fff; }
   .btn-colour-grid{ display:grid; grid-template-columns:1fr 1fr; gap:6px; }
   .btn-colour-field{ display:flex; align-items:center; justify-content:space-between; gap:8px; padding:5px 8px; border:1px solid var(--border); border-radius:9px; background:var(--bg); font-size:11.5px; font-weight:600; color:var(--text); min-height:36px; }
@@ -757,7 +759,7 @@
     flex:0 0 auto; height:30px; padding:0 12px; border-radius:999px; border:1.5px solid var(--border); background:var(--bg);
     color:var(--muted); font-size:11.5px; font-weight:600; font-family:var(--bodyfont); white-space:nowrap; cursor:pointer; touch-action:manipulation;
   }
-  .lib-chip.active{ background:linear-gradient(135deg,var(--btn-a,var(--primary)),var(--btn-b,var(--secondary))); color:var(--btn-text,#fff); border-color:transparent; }
+  .lib-chip.active{ background:linear-gradient(135deg,var(--btn-a,var(--primary)),var(--btn-b,var(--secondary))); color:var(--btn-text,var(--on-primary,#fff)); border-color:transparent; }
   .lib-card{
     position:relative; padding:12px 14px; margin-bottom:10px; border:1px solid var(--border); border-radius:14px;
     background:var(--surface); box-shadow:0 2px 10px rgba(0,0,0,0.05); cursor:pointer; -webkit-tap-highlight-color:transparent;
@@ -875,7 +877,16 @@
 </head>
 <body data-mode="dark">
 
-
+<div id="splashScreen">
+  <div class="splash-blob"></div>
+  <div class="splash-blob splash-blob-2"></div>
+  <div class="splash-inner">
+    <div class="splash-mark"><img id="splashLogoImg" alt="Gold Master logo"></div>
+    <div class="splash-title">GOLD MASTER</div>
+    <div class="splash-sub">by Deep &middot; v3.6.1</div>
+    <div class="splash-hint">Tap to continue</div>
+  </div>
+</div>
 
 <div class="wrap">
 
@@ -921,42 +932,7 @@
 
       <table class="rate-table" id="rateTable">
         <thead><tr><th>Karat</th><th>1 gram</th><th>10 gram</th></tr></thead>
-        <tbody id="rateTableBody"><tr>
-      <td><div class="karat-cell">
-        <div class="hallmark-badge">999</div>
-        <div><div class="karat-name">24K</div></div>
-      </div></td>
-      <td class="rate-figure" data-cell="per1">₹15,016.36</td>
-      <td class="rate-figure" data-cell="per10">₹1,50,163.64</td>
-    </tr><tr>
-      <td><div class="karat-cell">
-        <div class="hallmark-badge">916</div>
-        <div><div class="karat-name">22K</div></div>
-      </div></td>
-      <td class="rate-figure" data-cell="per1">₹13,765.00</td>
-      <td class="rate-figure" data-cell="per10">₹1,37,650.00</td>
-    </tr><tr>
-      <td><div class="karat-cell">
-        <div class="hallmark-badge">750</div>
-        <div><div class="karat-name">18K</div></div>
-      </div></td>
-      <td class="rate-figure" data-cell="per1">₹11,262.27</td>
-      <td class="rate-figure" data-cell="per10">₹1,12,622.73</td>
-    </tr><tr>
-      <td><div class="karat-cell">
-        <div class="hallmark-badge">583</div>
-        <div><div class="karat-name">14K</div></div>
-      </div></td>
-      <td class="rate-figure" data-cell="per1">₹8,759.55</td>
-      <td class="rate-figure" data-cell="per10">₹87,595.45</td>
-    </tr><tr>
-      <td><div class="karat-cell">
-        <div class="hallmark-badge">375</div>
-        <div><div class="karat-name">9K</div></div>
-      </div></td>
-      <td class="rate-figure" data-cell="per1">₹5,631.14</td>
-      <td class="rate-figure" data-cell="per10">₹56,311.36</td>
-    </tr></tbody>
+        <tbody id="rateTableBody"></tbody>
       </table>
 
       <!-- Live Preview & Export Style -->
@@ -996,8 +972,8 @@
               <input type="range" id="goldWmVPos" min="0" max="100" value="50" oninput="onPreviewWmVPos('gold',this.value)">
             </div>
             <div style="font-size:12px;color:var(--muted);font-weight:600;margin-bottom:2px;">Colour Theme</div>
-            <div class="preview-theme-row" id="goldThemeRow"><div class="preview-theme-swatch" title="Pink Red" style="background: linear-gradient(135deg, rgb(216, 27, 74) 50%, rgb(255, 92, 138) 50%);"></div><div class="preview-theme-swatch selected" title="Classic Gold" style="background: linear-gradient(135deg, rgb(122, 31, 43) 50%, rgb(212, 175, 55) 50%);"></div><div class="preview-theme-swatch" title="Royal Emerald" style="background: linear-gradient(135deg, rgb(11, 61, 46) 50%, rgb(212, 175, 55) 50%);"></div><div class="preview-theme-swatch" title="Midnight Sapphire" style="background: linear-gradient(135deg, rgb(13, 27, 42) 50%, rgb(201, 168, 106) 50%);"></div><div class="preview-theme-swatch" title="Rose Quartz" style="background: linear-gradient(135deg, rgb(183, 110, 121) 50%, rgb(43, 43, 43) 50%);"></div><div class="preview-theme-swatch" title="Onyx &amp; Gold" style="background: linear-gradient(135deg, rgb(17, 17, 17) 50%, rgb(212, 175, 55) 50%);"></div></div>
-            <div class="btn-colour-panel" data-key="gold"><div class="btn-colour-title">Button Colours</div><div class="preview-theme-row"><div class="preview-theme-swatch btn-colour-default" title="Match theme (default)"></div><div class="preview-theme-swatch" title="Emerald" style="background: linear-gradient(135deg, rgb(15, 81, 50) 50%, rgb(46, 139, 87) 50%);"></div><div class="preview-theme-swatch" title="Royal Blue" style="background: linear-gradient(135deg, rgb(30, 58, 138) 50%, rgb(59, 130, 246) 50%);"></div><div class="preview-theme-swatch" title="Charcoal &amp; Gold" style="background: linear-gradient(135deg, rgb(43, 43, 43) 50%, rgb(212, 175, 55) 50%);"></div><div class="preview-theme-swatch" title="Rose" style="background: linear-gradient(135deg, rgb(157, 23, 77) 50%, rgb(244, 114, 182) 50%);"></div><div class="preview-theme-swatch" title="Teal" style="background: linear-gradient(135deg, rgb(15, 118, 110) 50%, rgb(20, 184, 166) 50%);"></div><div class="preview-theme-swatch" title="Black" style="background: linear-gradient(135deg, rgb(17, 17, 17) 50%, rgb(75, 75, 75) 50%);"></div></div><div class="btn-colour-grid"><label class="btn-colour-field"><span>Fill 1</span><input type="color" data-f="c1"></label><label class="btn-colour-field"><span>Fill 2</span><input type="color" data-f="c2"></label><label class="btn-colour-field"><span>Text</span><input type="color" data-f="text"></label><label class="btn-colour-field"><span>Outline / Selected</span><input type="color" data-f="outline"></label></div><div class="btn-colour-demo"><button type="button" class="btn small" tabindex="-1">Sample</button><button type="button" class="btn ghost small" tabindex="-1">Sample</button><button type="button" class="btn ghost small btn-colour-reset" onclick="resetBtnColors()">Reset</button></div></div>
+            <div class="preview-theme-row" id="goldThemeRow"></div>
+            <div class="btn-colour-panel" data-key="gold"></div>
           </div>
           <button class="btn preview-save-btn hidden" id="goldSavePrefBtn" onclick="saveExportPreference('gold')">💾 Save Preference</button>
           <div class="preview-hint">This is exactly how the saved / shared image will look — sized to fit a WhatsApp Status perfectly.</div>
@@ -1023,7 +999,7 @@
         <label>Karat</label>
         <select id="jewelKarat" onchange="computeJewel()">
           <option value="24">24K — 999</option>
-          <option value="22" selected="">22K — 916</option>
+          <option value="22" selected>22K — 916</option>
           <option value="18">18K — 750</option>
           <option value="14">14K — 583</option>
           <option value="9">9K — 375</option>
@@ -1061,7 +1037,7 @@
         <label>Diamond Charges (₹ flat)</label>
         <input type="text" id="jewelDiamondFlat" placeholder="Enter Diamond Charges" min="0" inputmode="decimal" oninput="restrictToNumeric(this); computeJewel()">
       </div>
-      <div class="field hidden" id="stoneField">
+      <div class="field" id="stoneField">
         <label>Additional Stone / Setting Charges (₹)</label>
         <input type="text" id="jewelStone" placeholder="Enter Amount (optional)" inputmode="decimal" oninput="restrictToNumeric(this); computeJewel()">
       </div>
@@ -1131,7 +1107,7 @@
             <input type="text" id="jewelDiscountMaking" placeholder="Enter Discount" min="0" max="100" inputmode="decimal" oninput="restrictToNumeric(this); computeJewel()">
           </div>
 
-          <div class="toggle-row hidden" id="discOnStoneRow" style="margin-bottom:8px;">
+          <div class="toggle-row" id="discOnStoneRow" style="margin-bottom:8px;">
             <span style="font-size:13px;">Discount on Stone / Diamond Charges</span>
             <label class="switch glass small">
               <input type="checkbox" id="discOnStoneToggle" onchange="onDiscSplitToggle()">
@@ -1158,16 +1134,16 @@
           <div class="glass-title">✦ Add to Slide</div>
         </div>
         <div class="glass-body slide-chips" id="slideVisBody">
-          <label class="slide-chip"><input type="checkbox" id="slideKarat" checked="" onchange="computeJewel()"><span>Karat</span></label>
-          <label class="slide-chip"><input type="checkbox" id="slideWeight" checked="" onchange="computeJewel()"><span>Weight</span></label>
-          <label class="slide-chip"><input type="checkbox" id="slideGoldValue" checked="" onchange="computeJewel()"><span>Gold value</span></label>
-          <label class="slide-chip"><input type="checkbox" id="slideMaking" checked="" onchange="computeJewel()"><span>Making</span></label>
-          <label class="slide-chip"><input type="checkbox" id="slideGST" checked="" onchange="computeJewel()"><span>GST</span></label>
-          <label class="slide-chip"><input type="checkbox" id="slideAdvance" checked="" onchange="computeJewel()"><span>Advance</span></label>
+          <label class="slide-chip"><input type="checkbox" id="slideKarat" checked onchange="computeJewel()"><span>Karat</span></label>
+          <label class="slide-chip"><input type="checkbox" id="slideWeight" checked onchange="computeJewel()"><span>Weight</span></label>
+          <label class="slide-chip"><input type="checkbox" id="slideGoldValue" checked onchange="computeJewel()"><span>Gold value</span></label>
+          <label class="slide-chip"><input type="checkbox" id="slideMaking" checked onchange="computeJewel()"><span>Making</span></label>
+          <label class="slide-chip"><input type="checkbox" id="slideGST" checked onchange="computeJewel()"><span>GST</span></label>
+          <label class="slide-chip"><input type="checkbox" id="slideAdvance" checked onchange="computeJewel()"><span>Advance</span></label>
         </div>
       </div>
 
-      <div class="breakdown" id="jewelBreakdown"><div class="breakdown-row"><span>Gold value (22K × 0g)</span><span>₹0.00</span></div><div class="breakdown-row"><span>Making charges (0%)</span><span>₹0.00</span></div><div class="breakdown-row"><span>GST (3%)</span><span>₹0.00</span></div><div class="breakdown-row total"><span>Total</span><span>₹0.00</span></div></div>
+      <div class="breakdown" id="jewelBreakdown"></div>
 
       <!-- Live Preview & Export Style -->
       <div class="chip-row chip-grid">
@@ -1206,8 +1182,8 @@
               <input type="range" id="jewelWmVPos" min="0" max="100" value="50" oninput="onPreviewWmVPos('jewel',this.value)">
             </div>
             <div style="font-size:12px;color:var(--muted);font-weight:600;margin-bottom:2px;">Colour Theme</div>
-            <div class="preview-theme-row" id="jewelThemeRow"><div class="preview-theme-swatch" title="Pink Red" style="background: linear-gradient(135deg, rgb(216, 27, 74) 50%, rgb(255, 92, 138) 50%);"></div><div class="preview-theme-swatch selected" title="Classic Gold" style="background: linear-gradient(135deg, rgb(122, 31, 43) 50%, rgb(212, 175, 55) 50%);"></div><div class="preview-theme-swatch" title="Royal Emerald" style="background: linear-gradient(135deg, rgb(11, 61, 46) 50%, rgb(212, 175, 55) 50%);"></div><div class="preview-theme-swatch" title="Midnight Sapphire" style="background: linear-gradient(135deg, rgb(13, 27, 42) 50%, rgb(201, 168, 106) 50%);"></div><div class="preview-theme-swatch" title="Rose Quartz" style="background: linear-gradient(135deg, rgb(183, 110, 121) 50%, rgb(43, 43, 43) 50%);"></div><div class="preview-theme-swatch" title="Onyx &amp; Gold" style="background: linear-gradient(135deg, rgb(17, 17, 17) 50%, rgb(212, 175, 55) 50%);"></div></div>
-            <div class="btn-colour-panel" data-key="jewel"><div class="btn-colour-title">Button Colours</div><div class="preview-theme-row"><div class="preview-theme-swatch btn-colour-default" title="Match theme (default)"></div><div class="preview-theme-swatch" title="Emerald" style="background: linear-gradient(135deg, rgb(15, 81, 50) 50%, rgb(46, 139, 87) 50%);"></div><div class="preview-theme-swatch" title="Royal Blue" style="background: linear-gradient(135deg, rgb(30, 58, 138) 50%, rgb(59, 130, 246) 50%);"></div><div class="preview-theme-swatch" title="Charcoal &amp; Gold" style="background: linear-gradient(135deg, rgb(43, 43, 43) 50%, rgb(212, 175, 55) 50%);"></div><div class="preview-theme-swatch" title="Rose" style="background: linear-gradient(135deg, rgb(157, 23, 77) 50%, rgb(244, 114, 182) 50%);"></div><div class="preview-theme-swatch" title="Teal" style="background: linear-gradient(135deg, rgb(15, 118, 110) 50%, rgb(20, 184, 166) 50%);"></div><div class="preview-theme-swatch" title="Black" style="background: linear-gradient(135deg, rgb(17, 17, 17) 50%, rgb(75, 75, 75) 50%);"></div></div><div class="btn-colour-grid"><label class="btn-colour-field"><span>Fill 1</span><input type="color" data-f="c1"></label><label class="btn-colour-field"><span>Fill 2</span><input type="color" data-f="c2"></label><label class="btn-colour-field"><span>Text</span><input type="color" data-f="text"></label><label class="btn-colour-field"><span>Outline / Selected</span><input type="color" data-f="outline"></label></div><div class="btn-colour-demo"><button type="button" class="btn small" tabindex="-1">Sample</button><button type="button" class="btn ghost small" tabindex="-1">Sample</button><button type="button" class="btn ghost small btn-colour-reset" onclick="resetBtnColors()">Reset</button></div></div>
+            <div class="preview-theme-row" id="jewelThemeRow"></div>
+            <div class="btn-colour-panel" data-key="jewel"></div>
           </div>
           <button class="btn preview-save-btn hidden" id="jewelSavePrefBtn" onclick="saveExportPreference('jewel')">💾 Save Preference</button>
           <div class="preview-hint">This is exactly how the saved / shared image will look — sized to fit a WhatsApp Status perfectly.</div>
@@ -1239,7 +1215,7 @@
         <label>Karat</label>
         <select id="pgKarat" onchange="onPgKaratChange()">
           <option value="24">24K — 999 (Pure)</option>
-          <option value="22" selected="">22K — 916</option>
+          <option value="22" selected>22K — 916</option>
           <option value="18">18K — 750</option>
           <option value="14">14K — 583</option>
           <option value="10">10K — 417</option>
@@ -1260,7 +1236,7 @@
         </div>
         <div style="font-size:11px;color:var(--muted);margin-top:6px;">Rounded uses the 3-decimal weight (e.g. 5.833) for the value calculation; Exact uses the full unrounded weight.</div>
       </div>
-      <div class="breakdown" id="pgResultBox"><div class="empty-note">Enter the gross weight and karat to calculate.</div></div>
+      <div class="breakdown" id="pgResultBox"></div>
     </div>
   </div>
 
@@ -1283,7 +1259,7 @@
         <label>Rate (₹ per Ratti) — optional</label>
         <input type="text" id="stoneConvRate" placeholder="Enter Rate per Ratti" min="0" inputmode="decimal" oninput="restrictToNumeric(this); computeStoneConv()">
       </div>
-      <div class="breakdown" id="stoneConvResultBox"><div class="empty-note">Enter a ratti value to convert.</div></div>
+      <div class="breakdown" id="stoneConvResultBox"></div>
     </div>
   </div>
 
@@ -1303,12 +1279,12 @@
         <button class="btn ghost small" type="button" onclick="libShowAccount()">Account</button>
         <button class="btn ghost small" type="button" onclick="libExport()">Export</button>
         <button class="btn ghost small" type="button" onclick="document.getElementById('libImportFile').click()">Import</button>
-        <input type="file" id="libImportFile" accept="application/json,.json" hidden="" onchange="libImport(this)">
+        <input type="file" id="libImportFile" accept="application/json,.json" hidden onchange="libImport(this)">
       </div>
 
       <input class="lib-input lib-search" id="libSearch" type="search" placeholder="Search notes, calculations, tags…" oninput="renderLibrary()">
-      <div class="lib-filters" id="libFilters"><button class="lib-chip active" type="button">All · 0</button><button class="lib-chip" type="button">Notes · 0</button><button class="lib-chip" type="button">Calculation · 0</button><button class="lib-chip" type="button">Learning Module · 0</button><button class="lib-chip" type="button">Reference · 0</button></div>
-      <div id="libList"><div class="lib-empty"><div class="lib-empty-icon">📚</div><div>The library is empty for now.</div></div></div>
+      <div class="lib-filters" id="libFilters"></div>
+      <div id="libList"></div>
     </div>
   </div>
 
@@ -1384,18 +1360,12 @@
           <label>Karat (0–24, decimals allowed)</label>
           <input type="text" id="gepKaratInput" placeholder="e.g. 19.5" min="0" max="24" step="0.1" inputmode="decimal" oninput="restrictToNumeric(this); onGepKaratInput(this.value)">
         </div>
-        <div class="karat-quick-btns" id="gepKaratQuickBtns"><button type="button" class="karat-mini-btn" onclick="selectGepKarat(9)">9</button><button type="button" class="karat-mini-btn" onclick="selectGepKarat(10)">10</button><button type="button" class="karat-mini-btn" onclick="selectGepKarat(12)">12</button><button type="button" class="karat-mini-btn" onclick="selectGepKarat(14)">14</button><button type="button" class="karat-mini-btn" onclick="selectGepKarat(16)">16</button><button type="button" class="karat-mini-btn" onclick="selectGepKarat(18)">18</button><button type="button" class="karat-mini-btn" onclick="selectGepKarat(20)">20</button><button type="button" class="karat-mini-btn" onclick="selectGepKarat(22)">22</button><button type="button" class="karat-mini-btn" onclick="selectGepKarat(24)">24</button></div>
-        <div id="gepKaratQuickResult"><div class="empty-note">Type a karat or tap one above for a quick per-gram value.</div></div>
+        <div class="karat-quick-btns" id="gepKaratQuickBtns"></div>
+        <div id="gepKaratQuickResult"></div>
       </div>
 
       <div id="gepReadingModeBlock" class="hidden">
-        <div id="gepReadingsList"><div class="row2"><div class="field">
-    <label>First Reading (%)</label>
-    <input type="text" value="" placeholder="Enter Value" min="0" max="100" inputmode="decimal" oninput="restrictToNumeric(this); updateGepReading(1, this.value)">
-  </div><div class="field">
-    <label>Second Reading (%)</label>
-    <input type="text" value="" placeholder="Enter Value" min="0" max="100" inputmode="decimal" oninput="restrictToNumeric(this); updateGepReading(2, this.value)">
-  </div></div></div>
+        <div id="gepReadingsList"></div>
         <button class="btn ghost" type="button" onclick="addGepReading()">+ Add Reading</button>
       </div>
 
@@ -1463,7 +1433,7 @@
         </div>
       </div>
 
-      <div class="breakdown" id="gepBreakdown"><div class="empty-note">Tap a karat above to calculate for a specific weight.</div></div>
+      <div class="breakdown" id="gepBreakdown"></div>
 
       <div class="glass-block glass-body hidden" id="gepBuyBackBody">
         <div class="toggle-row" style="margin-bottom:8px;">
@@ -1504,8 +1474,8 @@
             <input type="range" id="gepWmVPos" min="0" max="100" value="50" oninput="onPreviewWmVPos('gep',this.value)">
           </div>
           <div style="font-size:12px;color:var(--muted);font-weight:600;margin-bottom:2px;">Colour Theme</div>
-          <div class="preview-theme-row" id="gepThemeRow"><div class="preview-theme-swatch" title="Pink Red" style="background: linear-gradient(135deg, rgb(216, 27, 74) 50%, rgb(255, 92, 138) 50%);"></div><div class="preview-theme-swatch selected" title="Classic Gold" style="background: linear-gradient(135deg, rgb(122, 31, 43) 50%, rgb(212, 175, 55) 50%);"></div><div class="preview-theme-swatch" title="Royal Emerald" style="background: linear-gradient(135deg, rgb(11, 61, 46) 50%, rgb(212, 175, 55) 50%);"></div><div class="preview-theme-swatch" title="Midnight Sapphire" style="background: linear-gradient(135deg, rgb(13, 27, 42) 50%, rgb(201, 168, 106) 50%);"></div><div class="preview-theme-swatch" title="Rose Quartz" style="background: linear-gradient(135deg, rgb(183, 110, 121) 50%, rgb(43, 43, 43) 50%);"></div><div class="preview-theme-swatch" title="Onyx &amp; Gold" style="background: linear-gradient(135deg, rgb(17, 17, 17) 50%, rgb(212, 175, 55) 50%);"></div></div>
-            <div class="btn-colour-panel" data-key="gep"><div class="btn-colour-title">Button Colours</div><div class="preview-theme-row"><div class="preview-theme-swatch btn-colour-default" title="Match theme (default)"></div><div class="preview-theme-swatch" title="Emerald" style="background: linear-gradient(135deg, rgb(15, 81, 50) 50%, rgb(46, 139, 87) 50%);"></div><div class="preview-theme-swatch" title="Royal Blue" style="background: linear-gradient(135deg, rgb(30, 58, 138) 50%, rgb(59, 130, 246) 50%);"></div><div class="preview-theme-swatch" title="Charcoal &amp; Gold" style="background: linear-gradient(135deg, rgb(43, 43, 43) 50%, rgb(212, 175, 55) 50%);"></div><div class="preview-theme-swatch" title="Rose" style="background: linear-gradient(135deg, rgb(157, 23, 77) 50%, rgb(244, 114, 182) 50%);"></div><div class="preview-theme-swatch" title="Teal" style="background: linear-gradient(135deg, rgb(15, 118, 110) 50%, rgb(20, 184, 166) 50%);"></div><div class="preview-theme-swatch" title="Black" style="background: linear-gradient(135deg, rgb(17, 17, 17) 50%, rgb(75, 75, 75) 50%);"></div></div><div class="btn-colour-grid"><label class="btn-colour-field"><span>Fill 1</span><input type="color" data-f="c1"></label><label class="btn-colour-field"><span>Fill 2</span><input type="color" data-f="c2"></label><label class="btn-colour-field"><span>Text</span><input type="color" data-f="text"></label><label class="btn-colour-field"><span>Outline / Selected</span><input type="color" data-f="outline"></label></div><div class="btn-colour-demo"><button type="button" class="btn small" tabindex="-1">Sample</button><button type="button" class="btn ghost small" tabindex="-1">Sample</button><button type="button" class="btn ghost small btn-colour-reset" onclick="resetBtnColors()">Reset</button></div></div>
+          <div class="preview-theme-row" id="gepThemeRow"></div>
+            <div class="btn-colour-panel" data-key="gep"></div>
         </div>
         <button class="btn preview-save-btn hidden" id="gepSavePrefBtn" onclick="saveExportPreference('gep')">💾 Save Preference</button>
         <div class="preview-hint">This is exactly how the saved / shared image will look — sized to fit a WhatsApp Status perfectly.</div>
@@ -1531,7 +1501,7 @@
 
     <div class="set-block">
       <h3>Theme</h3>
-      <div class="theme-grid" id="themeGrid"><div class="theme-swatch selected" style="background: linear-gradient(135deg, rgb(216, 27, 74) 50%, rgb(255, 92, 138) 50%);"><label>Pink Red</label></div><div class="theme-swatch" style="background: linear-gradient(135deg, rgb(122, 31, 43) 50%, rgb(212, 175, 55) 50%);"><label>Classic Gold</label></div><div class="theme-swatch" style="background: linear-gradient(135deg, rgb(11, 61, 46) 50%, rgb(212, 175, 55) 50%);"><label>Royal Emerald</label></div><div class="theme-swatch" style="background: linear-gradient(135deg, rgb(13, 27, 42) 50%, rgb(201, 168, 106) 50%);"><label>Midnight Sapphire</label></div><div class="theme-swatch" style="background: linear-gradient(135deg, rgb(183, 110, 121) 50%, rgb(43, 43, 43) 50%);"><label>Rose Quartz</label></div><div class="theme-swatch" style="background: linear-gradient(135deg, rgb(17, 17, 17) 50%, rgb(212, 175, 55) 50%);"><label>Onyx &amp; Gold</label></div></div>
+      <div class="theme-grid" id="themeGrid"></div>
       <div class="color-pickers">
         <div>
           <label>Custom Primary</label>
@@ -1574,9 +1544,7 @@
       <div style="font-size:11.5px;color:var(--muted);margin-bottom:8px;line-height:1.5;">
         This month's saved rates only — editable until the month ends. Past months are locked permanently in AppData below.
       </div>
-      <div id="historyList"><div class="history-item"><span>₹13,765.00 <span style="color:var(--muted);font-size:11px;">/22K</span></span>
-      <span style="color:var(--muted);font-size:11px;">30/9/2026 01:02 PM</span>
-      <span class="mini-x" onclick="deleteHistory(0)">✕</span></div></div>
+      <div id="historyList"></div>
       <div class="empty-note hidden" id="historyEmpty">No saved rates yet.</div>
       <div class="btn-row" style="margin-top:10px;">
         <button class="btn ghost" onclick="saveHistoryDataToGallery()">Save to Gallery</button>
@@ -1618,7 +1586,7 @@
       </div>
       <button class="btn ghost small" style="width:100%;margin-bottom:10px;" onclick="viewLifetimeArchive()">View All-Time Graph</button>
       <div id="archiveList"></div>
-      <div class="empty-note" id="archiveEmpty">No archived months yet — data locks in once a month ends.</div>
+      <div class="empty-note hidden" id="archiveEmpty">No archived months yet — data locks in once a month ends.</div>
     </div>
 
     <div class="set-block hidden" id="archiveViewBlock">
@@ -1638,7 +1606,7 @@
 
     <div class="set-block">
       <h3>Current Offers</h3>
-      <div id="offerList"><div class="empty-note">No offers added yet.</div></div>
+      <div id="offerList"></div>
       <button class="btn small ghost" style="margin-top:8px;width:100%;" onclick="addOffer()">+ Add Offer</button>
     </div>
 
@@ -1668,15 +1636,16 @@
           <div class="field">
             <label>Text Format</label>
             <div class="btn-row" style="margin:0;">
-              <button type="button" class="btn ghost small" id="wmBoldBtn" style="font-weight: 700; background: none; color: var(--primary);" onclick="toggleWmFormat('bold', this)" data-on="0">B</button>
-              <button type="button" class="btn ghost small" id="wmItalicBtn" style="font-style: italic; background: none; color: var(--primary);" onclick="toggleWmFormat('italic', this)" data-on="0">I</button>
-              <button type="button" class="btn ghost small" id="wmUnderlineBtn" style="text-decoration: underline; background: none; color: var(--primary);" onclick="toggleWmFormat('underline', this)" data-on="0">U</button>
+              <button type="button" class="btn ghost small" id="wmBoldBtn" style="font-weight:700;" onclick="toggleWmFormat('bold', this)">B</button>
+              <button type="button" class="btn ghost small" id="wmItalicBtn" style="font-style:italic;" onclick="toggleWmFormat('italic', this)">I</button>
+              <button type="button" class="btn ghost small" id="wmUnderlineBtn" style="text-decoration:underline;" onclick="toggleWmFormat('underline', this)">U</button>
             </div>
           </div>
 
           <div class="field">
             <label>Text Colour</label>
-            <input type="color" id="wmColor" value="#d81b4a" style="height:42px;width:100%;padding:2px;border-radius:10px;border:1px solid var(--border);background:var(--bg);cursor:pointer;">
+            <input type="color" id="wmColor" value="#e6007e"
+              style="height:42px;width:100%;padding:2px;border-radius:10px;border:1px solid var(--border);background:var(--bg);cursor:pointer;">
           </div>
 
           <div class="field">
@@ -1768,11 +1737,11 @@
         Exporting a backup file and keeping it somewhere else (email, Drive, Files) is the one step that
         guarantees your data survives any of those. Please export weekly.
       </p>
-      <div id="backupStatusLine" class="lib-hint" style="margin-bottom:10px;">Last backup: today.</div>
+      <div id="backupStatusLine" class="lib-hint" style="margin-bottom:10px;"></div>
       <div class="btn-row">
         <button class="btn" onclick="exportFullBackup()">Export Full Backup</button>
         <button class="btn ghost" onclick="document.getElementById('fullBackupFile').click()">Import Backup</button>
-        <input type="file" id="fullBackupFile" accept="application/json,.json" hidden="" onchange="importFullBackup(this)">
+        <input type="file" id="fullBackupFile" accept="application/json,.json" hidden onchange="importFullBackup(this)">
       </div>
 
       <div class="glass-block" id="autoBackupToggleBlock" style="margin-top:12px;">
@@ -1786,7 +1755,7 @@
         <div class="lib-hint" style="margin-top:6px;">When on, opening the app after 7 days automatically downloads a fresh backup file — no tap needed.</div>
       </div>
 
-      <div class="glass-block hidden" id="fsBackupBlock" style="margin-top:10px;">
+      <div class="glass-block" id="fsBackupBlock" style="margin-top:10px;">
         <div class="glass-head">
           <div class="glass-title">Auto-save to a linked file</div>
           <span class="lib-hint" id="fsBackupStatus">Not linked</span>
@@ -1827,7 +1796,7 @@
 
 <canvas id="shareCanvas" width="600" height="800"></canvas>
 <canvas id="photoShareCanvas" width="600" height="900"></canvas>
-<div class="toast" id="toast">Rate saved to history</div>
+<div class="toast" id="toast"></div>
 
 <script>
 /* ---------- Constants ---------- */
@@ -1839,13 +1808,16 @@ const KARATS = [
   {k:9,  hallmark:'375'},
 ];
 const THEME_PRESETS = [
-  {id:'pinkred', name:'Pink Red', primary:'#d81b4a', secondary:'#ff5c8a'},
-  {id:'classic', name:'Classic Gold', primary:'#7a1f2b', secondary:'#d4af37'},
-  {id:'emerald', name:'Royal Emerald', primary:'#0b3d2e', secondary:'#d4af37'},
-  {id:'sapphire', name:'Midnight Sapphire', primary:'#0d1b2a', secondary:'#c9a86a'},
-  {id:'rose', name:'Rose Quartz', primary:'#b76e79', secondary:'#2b2b2b'},
-  {id:'onyx', name:'Onyx & Gold', primary:'#111111', secondary:'#d4af37'},
+  /* primary/secondary = accent gradient (buttons, header, cards); onPrimary = text on it;
+     bg/surface = dark-mode page + card tint; sw1/sw2 = the two colours shown in the swatch */
+  {id:'pink',    name:'Dark & Pink',    primary:'#FFB6C1', secondary:'#FF8FA3', onPrimary:'#0B0B0E', bg:'#0B0B0E', surface:'#18181c', sw1:'#0B0B0E', sw2:'#FFB6C1'},
+  {id:'red',     name:'Dark & Red',     primary:'#D71920', secondary:'#9E1016', onPrimary:'#FFFFFF', bg:'#0A0A0A', surface:'#181314', sw1:'#0A0A0A', sw2:'#D71920'},
+  {id:'green',   name:'Dark & Green',   primary:'#A7C957', secondary:'#7FA83D', onPrimary:'#0B3D2E', bg:'#07261c', surface:'#0B3D2E', sw1:'#0B3D2E', sw2:'#A7C957'},
+  {id:'magenta', name:'Dark & Magenta', primary:'#E6007E', secondary:'#B0005F', onPrimary:'#FFFFFF', bg:'#150a12', surface:'#20101b', sw1:'#0B0B0B', sw2:'#E6007E'},
+  {id:'gold',    name:'Dark & Gold',    primary:'#D4AF37', secondary:'#A8871F', onPrimary:'#0B0B0B', bg:'#050505', surface:'#151311', sw1:'#000000', sw2:'#D4AF37'},
+  {id:'deeppink',name:'Deep Pink + Emerald', primary:'#DB1B60', secondary:'#007F5F', onPrimary:'#FFFFFF', bg:'#06231c', surface:'#0a3327', sw1:'#DB1B60', sw2:'#007F5F'},
 ];
+const DEFAULT_THEME_ID = 'magenta';
 
 /* ---------- Transaction / value-update animation tracking ----------
    Each section flashes a value only when it actually changes (like a
@@ -1871,11 +1843,11 @@ let state = {
   goldRoundUp: false,
   jewelType: 'plain',
   diamondPriceMode: 'carat', // 'carat' | 'flat'
-  theme: {mode:'preset', preset:'pinkred', customPrimary:'#d81b4a', customSecondary:'#ff5c8a'},
-  btnColors: {custom:false, c1:'#d81b4a', c2:'#ff5c8a', text:'#ffffff', outline:'#d81b4a'},
+  theme: {mode:'preset', preset:'magenta', customPrimary:'#e6007e', customSecondary:'#b0005f'},
+  btnColors: {custom:false, c1:'#e6007e', c2:'#b0005f', text:'#ffffff', outline:'#e6007e'},
   font: 'Cinzel',
   darkMode: true,
-  uiDefaultsVer: 1,
+  uiDefaultsVer: 2,
   history: [],
   archive: {}, // monthly-locked rate history, keyed "YYYY-MM" -> {label, entries:[{rate,ts}]}
   offers: [],
@@ -1893,7 +1865,7 @@ let state = {
     bold: false,
     italic: false,
     underline: false,
-    color: '#d81b4a',
+    color: '#e6007e',
     fontSize: 28,
     opacity: 0.25,
     position: 'center',
@@ -1923,12 +1895,14 @@ function mergeSavedState(saved){
     else state[k] = saved[k];
   });
   delete state.gdriveAutoBackup;   // removed feature
-  // One-time move to the new default look (dark + pink-red) for saves made before it existed.
-  if(state.uiDefaultsVer !== 1){
-    state.theme.mode = 'preset'; state.theme.preset = 'pinkred';
-    state.theme.customPrimary = '#d81b4a'; state.theme.customSecondary = '#ff5c8a';
-    state.btnColors = {custom:false, c1:'#d81b4a', c2:'#ff5c8a', text:'#ffffff', outline:'#d81b4a'};
-    state.darkMode = true; state.uiDefaultsVer = 1;
+  // One-time move to the new default look (Dark & Magenta) — also re-points anyone still on a removed theme.
+  const _known = THEME_PRESETS.some(t=>t.id===state.theme.preset);
+  if(state.uiDefaultsVer !== 2 || (state.theme.mode==='preset' && !_known)){
+    const d = THEME_PRESETS.find(t=>t.id===DEFAULT_THEME_ID);
+    state.theme.mode = 'preset'; state.theme.preset = DEFAULT_THEME_ID;
+    state.theme.customPrimary = d.primary; state.theme.customSecondary = d.secondary;
+    state.btnColors = {custom:false, c1:d.primary, c2:d.secondary, text:d.onPrimary, outline:d.primary};
+    state.darkMode = true; state.uiDefaultsVer = 2;
     setTimeout(persistSettings, 0);
   }
 }
@@ -2624,7 +2598,7 @@ function renderHistoryChart(canvas){
   const grad = ctx.createLinearGradient(0,0,W,0);
   grad.addColorStop(0, primary); grad.addColorStop(1, secondary);
   ctx.fillStyle = grad; ctx.fillRect(0,0,W,90);
-  ctx.fillStyle = '#fff'; ctx.font='bold 24px Georgia'; ctx.textAlign='center';
+  ctx.fillStyle = themeOnPrimary(); ctx.font='bold 24px Georgia'; ctx.textAlign='center';
   ctx.fillText('GOLD RATE HISTORY', W/2, 40);
   ctx.font='13px Arial'; ctx.fillText('22K per gram — Gold Master by Deep', W/2, 64);
 
@@ -2740,7 +2714,7 @@ function renderArchiveChart(canvas, points, titleLine, subtitleLine){
   const grad = ctx.createLinearGradient(0,0,W,0);
   grad.addColorStop(0, primary); grad.addColorStop(1, secondary);
   ctx.fillStyle = grad; ctx.fillRect(0,0,W,90);
-  ctx.fillStyle = '#fff'; ctx.font='bold 24px Georgia'; ctx.textAlign='center';
+  ctx.fillStyle = themeOnPrimary(); ctx.font='bold 24px Georgia'; ctx.textAlign='center';
   ctx.fillText((titleLine||'').toUpperCase(), W/2, 40);
   ctx.font='13px Arial'; ctx.fillText(subtitleLine||'', W/2, 64);
 
@@ -2790,7 +2764,7 @@ function renderHistoryDataCard(){
   const grad = ctx.createLinearGradient(0,0,W,0);
   grad.addColorStop(0, primary); grad.addColorStop(1, secondary);
   ctx.fillStyle = grad; ctx.fillRect(0,0,W,90);
-  ctx.fillStyle = '#fff'; ctx.font='bold 26px Georgia'; ctx.textAlign='center';
+  ctx.fillStyle = themeOnPrimary(); ctx.font='bold 26px Georgia'; ctx.textAlign='center';
   ctx.fillText('GOLD RATE HISTORY', W/2, 40);
   ctx.font='13px Arial'; ctx.fillText('Saved 22K rates — Gold Master by Deep', W/2, 64);
 
@@ -3102,6 +3076,16 @@ function slideVisible(id){
 }
 
 /* ---------- Theme ---------- */
+function themeOnPrimary(){
+  if(state.theme.mode!=='custom'){
+    const t = THEME_PRESETS.find(x=>x.id===state.theme.preset)||THEME_PRESETS[0];
+    return t.onPrimary || '#ffffff';
+  }
+  const m = /^#?([0-9a-f]{6})$/i.exec(state.theme.customPrimary||''); if(!m) return '#ffffff';
+  const n = parseInt(m[1],16), lin = c=>{ c/=255; return c<=0.03928 ? c/12.92 : Math.pow((c+0.055)/1.055,2.4); };
+  const L = 0.2126*lin(n>>16&255)+0.7152*lin(n>>8&255)+0.0722*lin(n&255);
+  return L > 0.45 ? '#0B0B0E' : '#ffffff';
+}
 function applyTheme(){
   const root = document.documentElement.style;
   let p, s;
@@ -3113,6 +3097,10 @@ function applyTheme(){
   }
   root.setProperty('--primary', p);
   root.setProperty('--secondary', s);
+  root.setProperty('--on-primary', themeOnPrimary());
+  const _pre = (state.theme.mode!=='custom') ? (THEME_PRESETS.find(t=>t.id===state.theme.preset)||THEME_PRESETS[0]) : null;
+  if(_pre && state.darkMode){ root.setProperty('--bg', _pre.bg); root.setProperty('--surface', _pre.surface); }
+  else { root.removeProperty('--bg'); root.removeProperty('--surface'); }
   document.querySelector('meta[name=theme-color]').setAttribute('content', p);
   renderThemeGrid();
   refreshActivePreviews();
@@ -3125,7 +3113,7 @@ function renderThemeGrid(){
     const sel = state.theme.mode==='preset' && state.theme.preset===t.id;
     const div = document.createElement('div');
     div.className = 'theme-swatch'+(sel?' selected':'');
-    div.style.background = `linear-gradient(135deg, ${t.primary} 50%, ${t.secondary} 50%)`;
+    div.style.background = `linear-gradient(135deg, ${t.sw1} 50%, ${t.sw2} 50%)`;
     div.innerHTML = `<label>${t.name}</label>`;
     div.onclick = ()=>{ state.theme.mode='preset'; state.theme.preset=t.id; applyTheme(); persistSettings(); };
     grid.appendChild(div);
@@ -3150,6 +3138,7 @@ function applyFont(){
 function toggleDarkMode(){
   state.darkMode = document.getElementById('darkModeToggle').checked;
   document.body.setAttribute('data-mode', state.darkMode ? 'dark' : 'light');
+  applyTheme();
   persistSettings();
   refreshActivePreviews();
 }
@@ -3159,7 +3148,7 @@ function addOffer(){
   state.offers.push({
     id: Date.now(),
     text:'New offer — tap edit to customize',
-    bold:false, italic:false, textColor:'#ffffff', bgColor:'#d81b4a',
+    bold:false, italic:false, textColor:'#ffffff', bgColor:'#e6007e',
     marquee:false, direction:'ltr',
     start:'', end:''
   });
@@ -3258,9 +3247,9 @@ function wrapText(ctx, text, x, y, maxWidth, lineHeight){
 }
 
 function getThemeColors(){
-  if(state.theme.mode==='custom') return {primary:state.theme.customPrimary, secondary:state.theme.customSecondary};
+  if(state.theme.mode==='custom') return {primary:state.theme.customPrimary, secondary:state.theme.customSecondary, onPrimary:themeOnPrimary()};
   const preset = THEME_PRESETS.find(t=>t.id===state.theme.preset)||THEME_PRESETS[0];
-  return {primary:preset.primary, secondary:preset.secondary};
+  return {primary:preset.primary, secondary:preset.secondary, onPrimary:themeOnPrimary()};
 }
 
 function renderGoldCard(targetCanvasId, previewMode){
@@ -3303,7 +3292,7 @@ function renderGoldCard(targetCanvasId, previewMode){
   const grad = ctx.createLinearGradient(0,0,W,0);
   grad.addColorStop(0, primary); grad.addColorStop(1, secondary);
   ctx.fillStyle = grad; ctx.fillRect(0,0,W,headerH);
-  ctx.fillStyle = '#fff'; ctx.font=`bold ${Math.round(58*ts)}px Georgia`; ctx.textAlign='center';
+  ctx.fillStyle = themeOnPrimary(); ctx.font=`bold ${Math.round(58*ts)}px Georgia`; ctx.textAlign='center';
   ctx.fillText('GOLD MASTER', W/2, headerH*0.46);
   ctx.font=`${Math.round(26*ts)}px Arial`;
   ctx.fillText('by Deep', W/2, headerH*0.74);
@@ -3319,7 +3308,7 @@ function renderGoldCard(targetCanvasId, previewMode){
 
   if(activeOffers.length){
     ctx.fillStyle = primary; ctx.fillRect(48, y, W-96, 74*sg);
-    ctx.fillStyle='#fff'; ctx.font=`bold ${Math.round(26*ts)}px Arial`; ctx.textAlign='center';
+    ctx.fillStyle=themeOnPrimary(); ctx.font=`bold ${Math.round(26*ts)}px Arial`; ctx.textAlign='center';
     ctx.fillText(activeOffers[0].text, W/2, y + 48*sg);
     y += offerH;
   }
@@ -3622,7 +3611,7 @@ function renderJewelCard(targetCanvasId, previewMode){
   const grad = ctx.createLinearGradient(0,0,W,0);
   grad.addColorStop(0, primary); grad.addColorStop(1, secondary);
   ctx.fillStyle = grad; ctx.fillRect(0,0,W,headerH);
-  ctx.fillStyle = '#fff'; ctx.font=`bold ${Math.round(46*ts)}px Georgia`; ctx.textAlign='center';
+  ctx.fillStyle = themeOnPrimary(); ctx.font=`bold ${Math.round(46*ts)}px Georgia`; ctx.textAlign='center';
   ctx.fillText('JEWELLERY PRICING', W/2, headerH*0.42);
   ctx.font=`${Math.round(24*ts)}px Arial`;
   ctx.fillText('Gold Master by Deep', W/2, headerH*0.72);
@@ -3790,7 +3779,7 @@ function composePhotoCard(img){
   const grad = ctx.createLinearGradient(0,0,W,0);
   grad.addColorStop(0, primary); grad.addColorStop(1, secondary);
   ctx.fillStyle = grad; ctx.globalAlpha=0.85; ctx.fillRect(0,0,W,50); ctx.globalAlpha=1;
-  ctx.fillStyle='#fff'; ctx.font='bold 20px Georgia'; ctx.textAlign='center';
+  ctx.fillStyle=themeOnPrimary(); ctx.font='bold 20px Georgia'; ctx.textAlign='center';
   ctx.fillText('GOLD MASTER by Deep', W/2, 32);
 
   let y = photoH + 40;
@@ -3909,7 +3898,7 @@ function renderPreviewThemeRow(key){
     const sel = state.theme.mode==='preset' && state.theme.preset===t.id;
     const div = document.createElement('div');
     div.className = 'preview-theme-swatch'+(sel?' selected':'');
-    div.style.background = `linear-gradient(135deg, ${t.primary} 50%, ${t.secondary} 50%)`;
+    div.style.background = `linear-gradient(135deg, ${t.sw1} 50%, ${t.sw2} 50%)`;
     div.title = t.name;
     div.onclick = ()=>{ setPreviewTheme(key, t.id); };
     row.appendChild(div);
@@ -3946,8 +3935,8 @@ function applyBtnColors(){
 }
 function themeBtnDefaults(){
   const cs = getComputedStyle(document.documentElement);
-  const hx = v => { const x=(cs.getPropertyValue(v)||'').trim(); return /^#[0-9a-f]{6}$/i.test(x)?x:'#d81b4a'; };
-  return {c1:hx('--primary'), c2:hx('--secondary'), text:'#ffffff', outline:hx('--primary')};
+  const hx = v => { const x=(cs.getPropertyValue(v)||'').trim(); return /^#[0-9a-f]{6}$/i.test(x)?x:'#e6007e'; };
+  return {c1:hx('--primary'), c2:hx('--secondary'), text:themeOnPrimary(), outline:hx('--primary')};
 }
 function setBtnColorField(field, val){
   const b = state.btnColors;
@@ -3960,7 +3949,7 @@ function setBtnColorPreset(p){
   applyBtnColors(); persistSettings();
 }
 function resetBtnColors(){
-  state.btnColors = {custom:false, c1:'#d81b4a', c2:'#ff5c8a', text:'#ffffff', outline:'#d81b4a'};
+  state.btnColors = {custom:false, c1:'#e6007e', c2:'#b0005f', text:'#ffffff', outline:'#e6007e'};
   applyBtnColors(); persistSettings(); toast('Button colours reset');
 }
 function renderBtnColourPanels(){
@@ -4858,7 +4847,7 @@ function initWatermarkUI(){
   document.getElementById('wmEnabled').checked = wm.enabled;
   document.getElementById('wmBody').classList.toggle('hidden', !wm.enabled);
   document.getElementById('wmText').value = wm.text || '';
-  document.getElementById('wmColor').value = wm.color || '#d81b4a';
+  document.getElementById('wmColor').value = wm.color || '#e6007e';
   document.getElementById('wmSize').value = wm.fontSize || 28;
   document.getElementById('wmSizeLabel').textContent = wm.fontSize || 28;
   document.getElementById('wmOpacity').value = Math.round((wm.opacity||0.25)*100);
@@ -5592,7 +5581,7 @@ function renderGepCard(targetCanvasId, previewMode){
   const grad = ctx.createLinearGradient(0,0,W,0);
   grad.addColorStop(0, primary); grad.addColorStop(1, secondary);
   ctx.fillStyle = grad; ctx.fillRect(0,0,W,headerH);
-  ctx.fillStyle = '#fff'; ctx.font=`bold ${Math.round(42*ts)}px Georgia`; ctx.textAlign='center';
+  ctx.fillStyle = themeOnPrimary(); ctx.font=`bold ${Math.round(42*ts)}px Georgia`; ctx.textAlign='center';
   ctx.fillText('OLD GOLD EXCHANGE', W/2, headerH*0.44);
   ctx.font=`${Math.round(24*ts)}px Arial`;
   ctx.fillText('by Master Developer', W/2, headerH*0.76);
@@ -5601,7 +5590,7 @@ function renderGepCard(targetCanvasId, previewMode){
 
   if(hasMsg){
     ctx.fillStyle = primary; ctx.fillRect(48, y-42*sg, W-96, 66*sg);
-    ctx.fillStyle='#fff'; ctx.font=`bold ${Math.round(24*ts)}px Arial`; ctx.textAlign='center';
+    ctx.fillStyle=themeOnPrimary(); ctx.font=`bold ${Math.round(24*ts)}px Arial`; ctx.textAlign='center';
     ctx.fillText(calc.msgText, W/2, y);
     y += 50*sg;
   }
@@ -5688,6 +5677,5 @@ initFromState();
   setTimeout(dismissSplash, 1900);
 })();
 </script>
-
-
-</body></html>
+</body>
+</html>
